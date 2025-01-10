@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './index.css'
-
+import PuppyDetails from './PuppyDetails';
 
 const App = () => {
   const [puppies, setPuppies] = useState([{
@@ -71,10 +71,17 @@ const App = () => {
   }])
   return (
     <>
-      <h1>Puppy Pals</h1>
-      <ul>{puppies.map((puppy)=>{
-        return <li key = {puppy.id}>{puppy.name}</li>
-      })}</ul>
+      <h1 class= "appPuppy">Puppy Pals</h1>
+      {puppies.map((puppy) => {
+        return(<PuppyDetails
+          key = {puppy.id}
+          puppyName = {puppy.name} 
+          puppyEmail = {puppy.email}
+          puppyAge = {puppy.age}
+          puppyOwnerId = {puppy.ownerId}/>)
+
+      })
+    }
     </>
   )
 }

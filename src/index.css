@@ -1,3 +1,28 @@
 body{
-  background-color: lightgrey;
+  background-color:rgb(167, 191, 237);
+}
+
+.appPuppy{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 75px;
+  font-weight: 700;
+}
+
+.puppyDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+
+  font-size:medium;
+  font-weight: 700;
+  color:rgb(138, 74, 197);
+}
+
+#name{
+  color:rgb(28, 39, 39);
+  font-weight: 800 ;
 }
